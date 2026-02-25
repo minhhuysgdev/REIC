@@ -1,0 +1,100 @@
+{
+  "intents": [
+    {
+      "id": "change_shipping_address",
+      "name": "Change Shipping Address",
+      "description": "Khách hàng muốn thay đổi địa chỉ giao hàng",
+      "path": ["Order-related", "Shipping", "ChangeShippingAddress"],
+      "examples": [
+        "I want to change my address",
+        "Update my shipping address",
+        "Tôi muốn đổi địa chỉ giao hàng",
+        "Thay đổi địa chỉ nhận hàng"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "delivery_status",
+      "name": "Delivery Status",
+      "description": "Kiểm tra trạng thái giao hàng, theo dõi đơn hàng",
+      "path": ["Order-related", "Shipping", "DeliveryStatus"],
+      "examples": [
+        "Where is my package?",
+        "Track my order",
+        "Đơn hàng của tôi đến đâu rồi?",
+        "Kiểm tra trạng thái giao hàng"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "shipping_instructions",
+      "name": "Shipping Instructions",
+      "description": "Hướng dẫn giao hàng: để trước cửa, gọi trước, ...",
+      "path": ["Order-related", "Shipping", "ShippingInstructions"],
+      "examples": [
+        "Leave at doorstep",
+        "Để trước cửa nhà",
+        "Gọi điện trước khi giao"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "return_order",
+      "name": "Return Order",
+      "description": "Trả hàng, hoàn tiền",
+      "path": ["Order-related", "Returns", "ReturnOrder"],
+      "examples": [
+        "I want to return this item",
+        "want to start a return",
+        "Tôi muốn trả hàng",
+        "Hoàn tiền đơn hàng"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "contact_customer_service",
+      "name": "Contact Customer Service",
+      "description": "Liên hệ nhân viên hỗ trợ, nói chuyện với con người",
+      "path": ["Order-related", "Support", "ContactCustomerService"],
+      "examples": [
+        "talk to human",
+        "Liên hệ nhân viên",
+        "Tôi muốn nói chuyện với người thật"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "kindle_reset",
+      "name": "Kindle Reset / Troubleshooting",
+      "description": "Máy Kindle treo, reset, sửa lỗi",
+      "path": ["Device", "Kindle", "Troubleshooting"],
+      "examples": [
+        "Máy Kindle của tôi bị treo màn hình, làm sao để reset được?",
+        "Kindle frozen, how to reset"
+      ],
+      "vertical": "1P"
+    },
+    {
+      "id": "alexa_wifi",
+      "name": "Alexa WiFi Connection",
+      "description": "Loa Alexa không kết nối được wifi",
+      "path": ["Device", "Alexa", "Troubleshooting"],
+      "examples": [
+        "Loa Alexa không kết nối được wifi",
+        "Alexa won't connect to wifi"
+      ],
+      "vertical": "1P"
+    },
+    {
+      "id": "subscription_renewal",
+      "name": "Subscription Renewal",
+      "description": "Gia hạn gói đăng ký xem phim, dịch vụ số",
+      "path": ["Digital", "Subscription", "Renewal"],
+      "examples": [
+        "Tôi muốn gia hạn gói đăng ký xem phim của hệ thống",
+        "Renew my streaming subscription"
+      ],
+      "vertical": "1P"
+    }
+  ]
+}
