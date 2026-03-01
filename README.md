@@ -15,6 +15,21 @@ Customer query → Query Encoder → Index Search → Retrieved intent candidate
 
 ## Cài đặt
 
+**Dùng uv (khuyến nghị):**
+
+```bash
+# Tạo virtual env
+uv venv
+
+# Kích hoạt (macOS/Linux)
+source .venv/bin/activate
+
+# Cài dependencies
+uv pip install -r requirements.txt
+```
+
+Hoặc dùng pip:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -30,6 +45,26 @@ python demo.py "Update my shipping address"
 python demo.py "Tôi muốn trả hàng"
 python demo.py "Máy Kindle bị treo màn hình"
 ```
+
+## Biến môi trường (optional)
+
+| Biến | Mục đích |
+|------|----------|
+| `HF_TOKEN` | Hugging Face: tải model nhanh hơn, rate limit cao hơn (tránh warning). Lấy token: [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
+| `OPENAI_API_KEY` | Dùng LLM reranker (OpenAI) trong pipeline |
+
+**Cách cấu hình:**
+
+```bash
+# Cách 1: export trong terminal (phiên hiện tại)
+export HF_TOKEN=hf_xxxx
+
+# Cách 2: file .env (không bị commit)
+cp .env.example .env
+# Sửa .env, thêm: HF_TOKEN=hf_xxxx
+```
+
+Sau đó load `.env` trong code (hoặc dùng `python-dotenv`). Jupyter/notebook: có thể chạy trong cell đầu `%env HF_TOKEN=hf_xxxx` hoặc export trước khi mở Jupyter.
 
 ## Dùng LLM reranker (OpenAI)
 
