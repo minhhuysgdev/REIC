@@ -9,16 +9,20 @@ sentence-transformers>=2.2.0
 # LLM reranker (OpenAI)
 openai>=1.0.0
 
-# Fine-tune baselines (BERT, Qwen) + notebook
+# Fine-tune baselines + Local LLM reranker (1.5B + LoRA)
 transformers>=4.35.0
 torch>=2.0.0
 accelerate>=0.24.0
+peft>=0.7.0
 jupyter>=1.0.0
 pandas>=2.0.0
 matplotlib>=3.7.0
 
 # .env (HF_TOKEN, OPENAI_API_KEY)
 python-dotenv>=1.0.0
+
+# Demo UI
+streamlit>=1.28.0
 
 # Dev
 pytest>=7.0.0

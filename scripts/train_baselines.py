@@ -130,7 +130,7 @@ def train_llm(
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     base = AutoModelForCausalLM.from_pretrained(
         model_name,
-        torch_dtype=torch.float32,
+        dtype=torch.float32,
         trust_remote_code=True,
     )
     # Freeze base

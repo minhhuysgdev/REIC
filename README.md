@@ -36,6 +36,18 @@ pip install -r requirements.txt
 
 ## Chạy demo
 
+**Streamlit (giao diện web):**
+
+```bash
+# Dùng đúng env có đủ dependencies (khuyến nghị)
+uv run streamlit run streamlit_app.py
+# hoặc: source .venv/bin/activate && streamlit run streamlit_app.py
+```
+
+Mở trình duyệt, nhập câu hỏi → xem intent dự đoán, P(tj|q,E), top candidates. Sidebar: đổi backend (tfidf/dense), top-k, bật OpenAI hoặc Local LLM reranker.
+
+**CLI:**
+
 ```bash
 # Interactive
 python demo.py
@@ -72,6 +84,33 @@ Sau đó load `.env` trong code (hoặc dùng `python-dotenv`). Jupyter/notebook
 export OPENAI_API_KEY=sk-...
 # Sửa demo.py: ReicPipeline(..., use_llm=True)
 ```
+
+## Reranker local 1.5B (constrained decoding, fine-tune được)
+
+Dùng model ~1.5B (Qwen2-1.5B, Phi-2, ...) với **constrained decoding**: tính P(tj|q,E) từ log-prob của model (không generate tự do). Có thể fine-tune bằng LoRA rồi load adapter.
+
+```python
+from reic.pipeline import ReicPipeline
+
+# Không fine-tune: dùng pretrained 1.5B
+pipeline = ReicPipeline(
+    "data/ontology.json",
+    top_k=5,
+    use_local_llm=True,
+    local_llm_model="Qwen/Qwen2-1.5B-Instruct",
+)
+
+# Đã fine-tune LoRA: load adapter
+pipeline = ReicPipeline(
+    "data/ontology.json",
+    top_k=5,
+    use_local_llm=True,
+    local_llm_model="Qwen/Qwen2-1.5B-Instruct",
+    adapter_path="checkpoints/reic_lora",
+)
+```
+
+Cần: `pip install peft` (đã có trong requirements).
 
 ## Cấu trúc
 

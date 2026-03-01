@@ -45,7 +45,7 @@ class QwenClassifier:
         dtype = torch.float16 if torch.cuda.is_available() else torch.float32
         self._model = AutoModelForCausalLM.from_pretrained(
             self.model_name,
-            torch_dtype=dtype,
+            dtype=dtype,
             device_map="auto" if torch.cuda.is_available() else None,
             trust_remote_code=True,
         )

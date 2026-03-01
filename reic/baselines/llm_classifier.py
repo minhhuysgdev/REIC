@@ -47,7 +47,7 @@ class LLMClassifier:
         self._tokenizer = AutoTokenizer.from_pretrained(load_path, trust_remote_code=True)
         base = AutoModelForCausalLM.from_pretrained(
             load_path,
-            torch_dtype=torch.float32,
+            dtype=torch.float32,
             device_map=None,
             trust_remote_code=True,
         )
