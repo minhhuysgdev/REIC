@@ -1,0 +1,78 @@
+[
+  {
+    "text": "Leave at doorstep",
+    "label": "shipping_instructions"
+  },
+  {
+    "text": "Bảo hành túi da thương hiệu",
+    "label": "brand_warranty_care"
+  },
+  {
+    "text": "Thay đổi địa chỉ nhận hàng",
+    "label": "change_shipping_address"
+  },
+  {
+    "text": "When will this dress be back in stock?",
+    "label": "product_availability"
+  },
+  {
+    "text": "Notify me when this collection drops",
+    "label": "preorder_fashion"
+  },
+  {
+    "text": "How do I use my loyalty points?",
+    "label": "brand_membership"
+  },
+  {
+    "text": "Đổi giày sang size 40",
+    "label": "size_exchange"
+  },
+  {
+    "text": "Tôi muốn đổi sang màu đen",
+    "label": "color_exchange"
+  },
+  {
+    "text": "Size chart for these jeans",
+    "label": "size_guide"
+  },
+  {
+    "text": "Tôi muốn trả hàng",
+    "label": "return_order"
+  },
+  {
+    "text": "Tư vấn mặc gì đi phỏng vấn",
+    "label": "styling_advice"
+  },
+  {
+    "text": "Tôi muốn nói chuyện với người thật",
+    "label": "contact_customer_service"
+  },
+  {
+    "text": "Loa Alexa không kết nối được wifi",
+    "label": "alexa_wifi"
+  },
+  {
+    "text": "Máy Kindle của tôi bị treo màn hình, làm sao để reset được?",
+    "label": "kindle_reset"
+  },
+  {
+    "text": "Áo len này giặt thế nào?",
+    "label": "care_instructions"
+  },
+  {
+    "text": "Click and collect this order",
+    "label": "brand_store_pickup"
+  },
+  {
+    "text": "Tôi muốn gia hạn gói đăng ký xem phim của hệ thống",
+    "label": "subscription_renewal"
+  },
+  {
+    "text": "Where is my package?",
+    "label": "delivery_status"
+  },
+  {
+    "text": "Gợi ý áo phối với quần này",
+    "label": "style_recommendation"
+  }
+]

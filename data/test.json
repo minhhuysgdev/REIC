@@ -1,0 +1,66 @@
+[
+  {
+    "text": "Bảng size áo này như thế nào?",
+    "label": "size_guide"
+  },
+  {
+    "text": "Tư vấn phong cách công sở",
+    "label": "style_recommendation"
+  },
+  {
+    "text": "I want to change my address",
+    "label": "change_shipping_address"
+  },
+  {
+    "text": "Nhận tại cửa hàng gần nhất",
+    "label": "brand_store_pickup"
+  },
+  {
+    "text": "Áo này nhỏ quá, tôi muốn đổi size L",
+    "label": "size_exchange"
+  },
+  {
+    "text": "Track my order",
+    "label": "delivery_status"
+  },
+  {
+    "text": "Gọi điện trước khi giao",
+    "label": "shipping_instructions"
+  },
+  {
+    "text": "Điểm thành viên của tôi còn bao nhiêu?",
+    "label": "brand_membership"
+  },
+  {
+    "text": "Can I swap for the red one?",
+    "label": "color_exchange"
+  },
+  {
+    "text": "How do I wash this silk dress?",
+    "label": "care_instructions"
+  },
+  {
+    "text": "Does this bag have warranty?",
+    "label": "brand_warranty_care"
+  },
+  {
+    "text": "Phối đồ nam công sở",
+    "label": "styling_advice"
+  },
+  {
+    "text": "Notify me when available",
+    "label": "product_availability"
+  },
+  {
+    "text": "Tôi muốn đặt trước mẫu này",
+    "label": "preorder_fashion"
+  },
+  {
+    "text": "I want to return this item",
+    "label": "return_order"
+  },
+  {
+    "text": "talk to human",
+    "label": "contact_customer_service"
+  }
+]

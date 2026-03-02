@@ -24,6 +24,28 @@ def load_train_data(ontology_path: Path) -> list[tuple[str, str]]:
     return data
 
 
+def load_split_data(data_dir: Path) -> tuple[list[tuple[str, str]], list[tuple[str, str]], list[tuple[str, str]] | None]:
+    """
+    Load train/dev/test từ data_dir: ưu tiên .json, không có thì .csv.
+    Mỗi phần tử (text, label). Trả về (train, dev, test).
+    """
+    def load_file(path_json: Path, path_csv: Path) -> list[tuple[str, str]]:
+        if path_json.exists():
+            with open(path_json, encoding="utf-8") as f:
+                items = json.load(f)
+            return [(x["text"], x["label"]) for x in items]
+        if path_csv.exists():
+            import csv
+            with open(path_csv, encoding="utf-8") as f:
+                r = csv.DictReader(f)
+                return [(row["text"], row["label"]) for row in r]
+        return []
+    train = load_file(data_dir / "train.json", data_dir / "train.csv")
+    dev = load_file(data_dir / "dev.json", data_dir / "dev.csv")
+    test = load_file(data_dir / "test.json", data_dir / "test.csv")
+    return train, dev, test if test else None
+
+
 def train_roberta(
     train_data: list[tuple[str, str]],
     output_dir: Path,
@@ -183,13 +205,18 @@ def train_llm(
 
 def main() -> None:
     root = Path(__file__).resolve().parent.parent
-    ontology_path = root / "data" / "ontology.json"
+    data_dir = root / "data"
+    ontology_path = data_dir / "ontology.json"
     if not ontology_path.exists():
         print(f"Không tìm thấy {ontology_path}")
         sys.exit(1)
 
-    train_data = load_train_data(ontology_path)
-    print(f"Training samples: {len(train_data)}")
+    train_data, dev_data, test_data = load_split_data(data_dir)
+    if train_data:
+        print(f"Train: {len(train_data)} | Dev: {len(dev_data)} | Test: {len(test_data) or 0} (từ data/*.csv)")
+    else:
+        train_data = load_train_data(ontology_path)
+        print(f"Training samples: {len(train_data)} (từ ontology.json, chưa có data/train.csv)")
 
     out = root / "checkpoints"
     model = sys.argv[1] if len(sys.argv) > 1 else "roberta"

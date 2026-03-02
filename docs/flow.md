@@ -55,7 +55,18 @@ Tài liệu mô tả luồng xử lý và các model trong project REIC.
 | `IntentOntology` | `reic/ontology.py` | Load từ `data/ontology.json`. Intent có `path` (vd. `["Order-related", "Shipping", "ChangeShippingAddress"]`), `vertical` (3P/1P). |
 | `iter_leaf_intents()` | — | Chỉ lấy intent lá (có `examples`) để đưa vào index. |
 
-### 2.2 Index (Retrieval)
+### 2.2 Index construction (xây dựng index)
+
+**Bước:** Từ ontology → danh sách documents (mỗi cặp intent + example = 1 document) → encode (TF-IDF hoặc dense) → lưu vector trong memory.
+
+| Cách build | Mô tả |
+|------------|--------|
+| **Script** | `python scripts/build_index.py [tfidf\|dense]` — build từ `data/ontology.json`, in thống kê + test search. Index trong memory, không ghi ra disk. |
+| **Pipeline** | Khi tạo `ReicPipeline(ontology_path, backend=...)` → gọi `KnowledgeIndex(ontology, ...)` → `TfidfIndex`/`DenseIndex.__init__` gọi `_build_index()`. |
+
+**Code:** `reic/index.py` — `TfidfIndex._build_index()`, `DenseIndex._build_index()`.
+
+### 2.3 Index (Retrieval)
 
 | Backend | Class | Model / Cách hoạt động |
 |---------|--------|------------------------|
@@ -64,13 +75,13 @@ Tài liệu mô tả luồng xử lý và các model trong project REIC.
 
 **Factory:** `KnowledgeIndex(ontology, backend="tfidf"|"dense", model_name=...)` → `reic/index.py`.
 
-### 2.3 Retriever
+### 2.4 Retriever
 
 - **Input:** `query: str`
 - **Output:** `list[IntentCandidate]` (top-k), mỗi candidate có `intent_id`, `name`, `description`, `path`, `example`, `score`
 - **File:** `reic/retriever.py` → `Retriever.retrieve(query)`
 
-### 2.4 Reranker
+### 2.5 Reranker
 
 | Loại | Class | Cách tính P(tj\|q,E) |
 |------|--------|----------------------|
@@ -80,7 +91,7 @@ Tài liệu mô tả luồng xử lý và các model trong project REIC.
 
 **Output reranker:** `(intent_id, intent_name, confidence, P_tj)` với `P_tj = {intent_id: probability}`.
 
-### 2.5 Kết quả
+### 2.6 Kết quả
 
 `ReicResult` (`reic/models.py`):
 

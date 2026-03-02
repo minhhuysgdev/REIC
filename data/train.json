@@ -1,0 +1,134 @@
+[
+  {
+    "text": "Suggest an outfit for a wedding",
+    "label": "style_recommendation"
+  },
+  {
+    "text": "Tôi muốn đổi địa chỉ giao hàng",
+    "label": "change_shipping_address"
+  },
+  {
+    "text": "Để trước cửa nhà",
+    "label": "shipping_instructions"
+  },
+  {
+    "text": "Pick up in store at your brand location",
+    "label": "brand_store_pickup"
+  },
+  {
+    "text": "Chất liệu vải có giặt máy được không",
+    "label": "care_instructions"
+  },
+  {
+    "text": "What should I wear for a casual Friday?",
+    "label": "styling_advice"
+  },
+  {
+    "text": "How does the sizing run?",
+    "label": "size_guide"
+  },
+  {
+    "text": "Outfit ideas for summer vacation",
+    "label": "styling_advice"
+  },
+  {
+    "text": "What goes well with this jacket?",
+    "label": "style_recommendation"
+  },
+  {
+    "text": "Member benefits for this brand",
+    "label": "brand_membership"
+  },
+  {
+    "text": "Tôi muốn đặt hàng và nhận tại store",
+    "label": "brand_store_pickup"
+  },
+  {
+    "text": "Update my shipping address",
+    "label": "change_shipping_address"
+  },
+  {
+    "text": "Đổi áo màu trắng sang màu xanh",
+    "label": "color_exchange"
+  },
+  {
+    "text": "Renew my streaming subscription",
+    "label": "subscription_renewal"
+  },
+  {
+    "text": "Áo này còn size M không?",
+    "label": "product_availability"
+  },
+  {
+    "text": "Can I pre-order the new release?",
+    "label": "preorder_fashion"
+  },
+  {
+    "text": "want to start a return",
+    "label": "return_order"
+  },
+  {
+    "text": "Còn hàng màu đỏ không",
+    "label": "product_availability"
+  },
+  {
+    "text": "Tôi cao 1m7 nên mặc size gì",
+    "label": "size_guide"
+  },
+  {
+    "text": "Hoàn tiền đơn hàng",
+    "label": "return_order"
+  },
+  {
+    "text": "I need to exchange for a bigger size",
+    "label": "size_exchange"
+  },
+  {
+    "text": "Care instructions for this jacket",
+    "label": "care_instructions"
+  },
+  {
+    "text": "Repair service for brand items",
+    "label": "brand_warranty_care"
+  },
+  {
+    "text": "Kindle frozen, how to reset",
+    "label": "kindle_reset"
+  },
+  {
+    "text": "This doesn't fit, can I get size M?",
+    "label": "size_exchange"
+  },
+  {
+    "text": "Đơn hàng của tôi đến đâu rồi?",
+    "label": "delivery_status"
+  },
+  {
+    "text": "Liên hệ nhân viên",
+    "label": "contact_customer_service"
+  },
+  {
+    "text": "Ưu đãi hội viên thương hiệu",
+    "label": "brand_membership"
+  },
+  {
+    "text": "Áo khoác này bảo hành thế nào?",
+    "label": "brand_warranty_care"
+  },
+  {
+    "text": "Alexa won't connect to wifi",
+    "label": "alexa_wifi"
+  },
+  {
+    "text": "Cho tôi đăng ký nhận thông báo khi có size",
+    "label": "preorder_fashion"
+  },
+  {
+    "text": "Do you have this in blue? I want to exchange",
+    "label": "color_exchange"
+  },
+  {
+    "text": "Kiểm tra trạng thái giao hàng",
+    "label": "delivery_status"
+  }
+]

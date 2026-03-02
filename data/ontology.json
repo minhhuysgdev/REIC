@@ -95,6 +95,149 @@
         "Renew my streaming subscription"
       ],
       "vertical": "1P"
+    },
+    {
+      "id": "size_exchange",
+      "name": "Size Exchange",
+      "description": "Đổi size quần áo, giày dép vì không vừa",
+      "path": ["Fashion", "Exchange", "SizeExchange"],
+      "examples": [
+        "Áo này nhỏ quá, tôi muốn đổi size L",
+        "I need to exchange for a bigger size",
+        "Đổi giày sang size 40",
+        "This doesn't fit, can I get size M?"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "color_exchange",
+      "name": "Color Exchange",
+      "description": "Đổi màu sản phẩm thời trang",
+      "path": ["Fashion", "Exchange", "ColorExchange"],
+      "examples": [
+        "Tôi muốn đổi sang màu đen",
+        "Do you have this in blue? I want to exchange",
+        "Đổi áo màu trắng sang màu xanh",
+        "Can I swap for the red one?"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "style_recommendation",
+      "name": "Style Recommendation",
+      "description": "Gợi ý phối đồ, phong cách, outfit",
+      "path": ["Fashion", "Product", "StyleRecommendation"],
+      "examples": [
+        "Gợi ý áo phối với quần này",
+        "What goes well with this jacket?",
+        "Tư vấn phong cách công sở",
+        "Suggest an outfit for a wedding"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "product_availability",
+      "name": "Product Availability",
+      "description": "Hỏi còn hàng không, khi nào có hàng, restock",
+      "path": ["Fashion", "Product", "AvailabilityInquiry"],
+      "examples": [
+        "Áo này còn size M không?",
+        "When will this dress be back in stock?",
+        "Còn hàng màu đỏ không",
+        "Notify me when available"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "care_instructions",
+      "name": "Care Instructions",
+      "description": "Hướng dẫn giặt, bảo quản, chất liệu vải",
+      "path": ["Fashion", "Product", "CareInstructions"],
+      "examples": [
+        "Áo len này giặt thế nào?",
+        "How do I wash this silk dress?",
+        "Chất liệu vải có giặt máy được không",
+        "Care instructions for this jacket"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "size_guide",
+      "name": "Size Guide",
+      "description": "Hỏi bảng size, size chart, đo như thế nào",
+      "path": ["Fashion", "Product", "SizeGuide"],
+      "examples": [
+        "Bảng size áo này như thế nào?",
+        "How does the sizing run?",
+        "Tôi cao 1m7 nên mặc size gì",
+        "Size chart for these jeans"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "preorder_fashion",
+      "name": "Pre-order / Notify When Available",
+      "description": "Đặt trước sản phẩm, nhận thông báo khi có hàng",
+      "path": ["Fashion", "Order", "PreOrder"],
+      "examples": [
+        "Tôi muốn đặt trước mẫu này",
+        "Notify me when this collection drops",
+        "Cho tôi đăng ký nhận thông báo khi có size",
+        "Can I pre-order the new release?"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "styling_advice",
+      "name": "Styling Advice",
+      "description": "Tư vấn phong cách, mix match, dress code",
+      "path": ["Fashion", "Support", "StylingAdvice"],
+      "examples": [
+        "Tư vấn mặc gì đi phỏng vấn",
+        "What should I wear for a casual Friday?",
+        "Phối đồ nam công sở",
+        "Outfit ideas for summer vacation"
+      ],
+      "vertical": "3P"
+    },
+    {
+      "id": "brand_membership",
+      "name": "Brand Membership / Loyalty",
+      "description": "Hội viên thương hiệu, điểm tích lũy, ưu đãi thành viên (kênh 1P)",
+      "path": ["Fashion", "1P", "BrandMembership"],
+      "examples": [
+        "Điểm thành viên của tôi còn bao nhiêu?",
+        "How do I use my loyalty points?",
+        "Ưu đãi hội viên thương hiệu",
+        "Member benefits for this brand"
+      ],
+      "vertical": "1P"
+    },
+    {
+      "id": "brand_store_pickup",
+      "name": "Brand Store Pickup",
+      "description": "Mua online nhận tại cửa hàng thương hiệu (1P)",
+      "path": ["Fashion", "1P", "StorePickup"],
+      "examples": [
+        "Tôi muốn đặt hàng và nhận tại store",
+        "Pick up in store at your brand location",
+        "Nhận tại cửa hàng gần nhất",
+        "Click and collect this order"
+      ],
+      "vertical": "1P"
+    },
+    {
+      "id": "brand_warranty_care",
+      "name": "Brand Warranty / Garment Care",
+      "description": "Bảo hành sản phẩm thương hiệu, bảo trì (1P)",
+      "path": ["Fashion", "1P", "WarrantyCare"],
+      "examples": [
+        "Áo khoác này bảo hành thế nào?",
+        "Does this bag have warranty?",
+        "Bảo hành túi da thương hiệu",
+        "Repair service for brand items"
+      ],
+      "vertical": "1P"
     }
   ]
 }

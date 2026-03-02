@@ -48,11 +48,6 @@ def main():
         if use_local_llm and use_llm:
             st.warning("Chỉ nên bật một: OpenAI hoặc Local LLM.")
         st.divider()
-        st.markdown("**Ví dụ query:**")
-        st.code("Update my shipping address", language=None)
-        st.code("Tôi muốn trả hàng", language=None)
-        st.code("Máy Kindle bị treo màn hình", language=None)
-
     # Cache pipeline
     key = f"{backend}_{top_k}_{use_llm}_{use_local_llm}"
     if key not in st.session_state:
