@@ -40,6 +40,7 @@ class ReicPipeline:
         self.index = KnowledgeIndex(
             self.ontology, backend=backend, model_name=model_name
         )
+        print(f"Index built with {backend} backend")
         self.retriever = Retriever(self.index, top_k=top_k)
         if use_local_llm:
             self.reranker: Reranker = LocalLLMReranker(
